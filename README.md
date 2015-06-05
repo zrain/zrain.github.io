@@ -1,2 +1,6 @@
-# zrain.github.io
-zrain的博客
+# [Zrain 的博客](zrain.github.io)
+
+## 缘由
+
+   做前端已经5个月了，经过一部前端某神的视频点播，认识到自己太多的不足 --
+
