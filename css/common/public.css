@@ -1,0 +1,56 @@
+body {
+	font-family: "Helvetica","Microsoft Yahei","微软雅黑","Tahoma";
+	font-size: 14px;
+	line-height: 1.428571429;
+	color: #333;
+    /*-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;*/
+}
+
+div, input, p, textarea, ul, li {
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+input {
+    font-family: "Helvetica","Microsoft Yahei","微软雅黑","Tahoma";
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.clear:after {
+	height: 0;
+	content: "";
+	clear: both;
+	display: block;
+	visibility:	hidden;
+	zoom: 1;
+}
+
+.user-select-none {
+    user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.hide {
+	display: none;
+}
+
+.fr {
+	float: right;
+}
+
+.fl {
+    float: left;
+}
