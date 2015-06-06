@@ -39,9 +39,9 @@ require.config({
  *  main 函数，整个程序的入口
  */
 require([
-    'app',
-    'angular',
-    'jquery',
+    "app",
+    "angular",
+    "jquery",
     "ngRoute",
     "ngResource",
     "ngSanitize",

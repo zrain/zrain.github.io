@@ -1,9 +1,9 @@
 define([
     "angular",
-    "controller/controllers",
-    "directive/directives",
-    "service/services",
-    "route/routes"
+    "controllers/controllers",
+    "directives/directives",
+    "services/services",
+    "routes/routes"
 ], function(angular, controllers, directives, services, routes){
     "use strict";
 
