@@ -48,7 +48,8 @@ require([
     "ngMessages",
     "controller/controllers",
     "directive/directives",
-    "service/services"
+    "service/services",
+    "filters/filters",
 ], function (){
     "use strict";
 

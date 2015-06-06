@@ -3,8 +3,9 @@ define([
     "controllers/controllers",
     "directives/directives",
     "services/services",
+    "filters/filters",
     "routes/routes"
-], function(angular, controllers, directives, services, routes){
+], function(angular, controllers, directives, services, filters, routes){
     "use strict";
 
     var mainModule = angular.module("app", [
@@ -12,6 +13,7 @@ define([
             "controllers",
             "directives",
             "services",
+            "filters",
             'ngSanitize',
             "ngMessages",
             "ngResource"
