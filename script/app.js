@@ -8,7 +8,7 @@ define([
 ], function(angular, controllers, directives, services, filters, routes){
     "use strict";
 
-    var mainModule = angular.module("app", [
+    var app = angular.module("app", [
             "ui.router",
             "controllers",
             "directives",
@@ -19,9 +19,11 @@ define([
             "ngResource"
         ]);
         // '[]' 中代表依赖的模块
-        mainModule.config( function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
+        app.config( function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
             // 默认打开路径
             $urlRouterProvider.otherwise('abouthis');
+            // HTML5 模式
+            // $locationProvider.html5Mode(true);
             // 注册路由
             for( var obj in routes ){
                 $stateProvider.state(

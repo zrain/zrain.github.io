@@ -23,7 +23,11 @@ input {
 
 a {
 	text-decoration: none;
+    outline: none;
 	color: inherit;
+}
+a:focus {
+    outline: none;
 }
 
 .clear:after {

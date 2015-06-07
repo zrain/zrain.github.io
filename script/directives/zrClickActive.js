@@ -11,21 +11,39 @@ define([
         return {
             restrict: 'A',
             link: function(scope, element, attrs) {
+                var isFirefox = /firefox/.test(navigator.userAgent.toLowerCase());
                 var thisEle = $(element);
-                var path = $location.path().split("\/")[1];
-                var aEleList = thisEle.find('a');
-                aEleList.each(function(index,element){
-                    var tempUrl = $(element).attr('href').split('#')[1];
-                    if( path == tempUrl ){
-                        $(element).parent('li').addClass('active').siblings().removeClass('active');
-                    }
-                });
+                // 给子标签绑定事件
                 var childrenEleList = thisEle.children();
                 childrenEleList.each(function(index,element){
                     $(element).on('click',function(){
                         $(element).addClass('active').siblings().removeClass('active');
                     });
                 });
+                // if( isFirefox ){
+                //     thisEle.on('contextmenu', function( e ){
+                //         e.preventDefault();
+                //         e.stopPropagation();
+                //         thisEle.click();
+                //         return false;
+                //     });
+                // }
+                // 检测URL是否改变
+                var checkUrl = function(){
+                    var path = $location.path().split("\/")[1];
+                    var aEleList = thisEle.find('a');
+                    aEleList.each(function(index,element){
+                        var target = $(element).attr('href');
+                        if( !target ){
+                            target = $(element).attr('ui-sref');
+                        }
+                        var tempUrl = target.split('#')[1];
+                        if( path == tempUrl ){
+                            $(element).parent('li').addClass('active').siblings().removeClass('active');
+                        }
+                    });
+                }
+                checkUrl();
             }
         }
     }]);
