@@ -46,9 +46,19 @@ require([
     "ngResource",
     "ngSanitize",
     "ngMessages",
-    "controller/controllers",
-    "directive/directives",
-    "service/services",
+    /* Controller */
+    "controllers/controllers",
+    "controllers/abouthisController",
+    "controllers/htmlController",
+    "controllers/cssController",
+    "controllers/javascriptController",
+    "controllers/toolsController",
+    /* Directive */
+    "directives/directives",
+    "directives/zrClickActive",
+    /* Services */
+    "services/services",
+    /* Filters */
     "filters/filters",
 ], function (){
     "use strict";
