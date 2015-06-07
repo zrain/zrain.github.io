@@ -95,6 +95,10 @@ html,body {
     line-height: 1.5;
     margin-bottom: 20px;
 }
+.abouthis-wrap p a {
+    color: #3E62A6;
+    text-decoration: underline;
+}
 .abouthis-wrap .title {
     padding-bottom: 5px;
     border-bottom: 1px solid #D4D4D4;
