@@ -93,6 +93,7 @@ html,body {
 }
 .abouthis-wrap p {
     line-height: 1.5;
+    margin-bottom: 20px;
 }
 .abouthis-wrap .title {
     padding-bottom: 5px;
