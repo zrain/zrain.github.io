@@ -1,5 +1,5 @@
 define([
-    "controllers/Controllers"
+    "controllers/controllers"
 ], function( controllers ){
     "use strict";
 
