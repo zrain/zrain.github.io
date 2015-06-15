@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>img2base64</title>
+    </head>
+    <body>
+        <input type="file" value="sdgsdg" id="demo_input" />
+        <textarea id="result" rows=30 cols=300></textarea>
+        <p id="img_area"></p>
+        <script>
+        window.onload = function(){
+            var input = document.getElementById("demo_input");
+            var result= document.getElementById("result");
+            var img_area = document.getElementById("img_area");
+            if ( typeof(FileReader) === 'undefined' ){
+                result.innerHTML = "抱歉，你的浏览器不支持 FileReader，请使用现代浏览器操作！";
+                input.setAttribute( 'disabled','disabled' );
+            } else {
+                input.addEventListener( 'change',readFile,false );
+            }
+        }
+        function readFile(){
+            var file = this.files[0];
+            if(!/image\/\w+/.test(file.type)){
+                alert("请确保文件为图像类型");
+                return false;
+            }
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function(e){
+                result.innerHTML = this.result;
+                img_area.innerHTML = '<div class="sitetip">图片img标签展示：</div><img src="'+this.result+'"alt=""/>';
+            }
+        }
+        </script>
+    </body>
+</html>
